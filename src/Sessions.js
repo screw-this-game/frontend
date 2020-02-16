@@ -24,4 +24,4 @@ class Sessions extends React.Component {
   }
 }
 
-export default App;
+export default Sessions;
