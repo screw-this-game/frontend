@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import { Container } from 'react-bootstrap';
 import axios from 'axios';
