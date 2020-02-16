@@ -28,6 +28,9 @@ class GamePanel extends React.Component {
     axios.put("https://stg-api.monotron.me/frontend/effects/" + clientId + "?effectName=" + cap).then(console.log);
   }
 
+  fixName(name) {
+    return name.split('_').join(' ');
+  }
 
   render() {
     const { sid } = this.props.match.params;
@@ -42,11 +45,11 @@ class GamePanel extends React.Component {
         <hr/>
         <Row>
           {!capabilities? "" : capabilities.map((cap, i) => 
-            <Card className="bg-light hoverCard" key={i} style={{margin: "0.5em"}} onClick={() => this.sendCapability(sid, cap)}>
+            <Col sm={4}><Card className="bg-light hoverCard" key={i} style={{margin: "0.5em"}} onClick={() => this.sendCapability(sid, cap)}>
               <Card.Body>
-                <Card.Title style={{textAlign:"center"}}>{cap}</Card.Title>
+                <Card.Title style={{textAlign:"center"}}>{this.fixName(cap)}</Card.Title>
               </Card.Body>
-            </Card>
+            </Card></Col>
             )}
         </Row>
       </Container>
