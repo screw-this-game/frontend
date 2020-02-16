@@ -4,7 +4,8 @@ import { Container } from 'react-bootstrap';
 import axios from 'axios';
 class GamePanel extends React.Component {
 
-  GamePanel() {
+  constructor(props) {
+    super(props);
     this.state = { }
     setTimeout(() => {
       console.log("Timeout!");
