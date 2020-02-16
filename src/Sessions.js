@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 import axios from 'axios';
 class Sessions extends React.Component {
 
-  GamePanel() {
+  Sessions() {
     this.state = { }
     setTimeout(() => {
       console.log("Timeout!");
