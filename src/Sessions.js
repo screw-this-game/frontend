@@ -36,7 +36,7 @@ class Sessions extends React.Component {
         <h1>Current Game Sessions</h1>
         <hr/>
         <Row>
-          {this.state.data ? this.state.data.clients.map((val, i) => <Col style={{paddingBottom: "10px"}} sm={4} key={i}>
+          {this.state.data ? this.state.data.clients.map((val, i) => <Col style={{paddingBottom: "10px"}} lg={4} sm={6} key={i}>
             <Card className="bg-light hoverCard" onClick={() => this.setState({"redirect": val.clientId})}>
               <Card.Body>
               <Card.Img variant="top" src={val.type == "MINECRAFT" ? 

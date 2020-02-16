@@ -45,7 +45,7 @@ class GamePanel extends React.Component {
         <hr/>
         <Row>
           {!capabilities? "" : capabilities.map((cap, i) => 
-            <Col sm={4}><Card className="bg-light hoverCard" key={i} style={{margin: "0.5em"}} onClick={() => this.sendCapability(sid, cap)}>
+            <Col lg={4} sm={6}><Card className="bg-light hoverCard" key={i} style={{margin: "0.5em"}} onClick={() => this.sendCapability(sid, cap)}>
               <Card.Body>
                 <Card.Title style={{textAlign:"center"}}>{this.fixName(cap)}</Card.Title>
               </Card.Body>
