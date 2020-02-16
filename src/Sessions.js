@@ -35,6 +35,10 @@ class Sessions extends React.Component {
           {this.state.data ? this.state.data.clients.map((val, i) => <Col style={{paddingBottom: "10px"}} sm={6} key={i}>
             <Card className="bg-light hoverCard" onClick={() => this.setState({"redirect": val.clientId})}>
               <Card.Body>
+              <Card.Img variant="top" src={val.type == "MINECRAFT" ? 
+              "https://dl1.cbsistatic.com/i/2019/11/22/0c19a1bb-e1f0-482b-b533-24b9ec455c70/002a60cd29d3515a221ce74df3db7e4e/imgingest-3095197656598467933.png"
+             : val.type == "TERRARIA" ? "https://dl1.cbsistatic.com/i/2017/05/25/198de8ee-b0fc-45ad-81f7-5dc58f01f9ad/4dd39a373cf71e6a06375752d7f7cd8c/imgingest-1359977285710609081.png"
+             : val.type == "TEAM_FORTRESS_2" ?  "https://i.ya-webdesign.com/images/tf2-transparent-icon-9.png" : "https://i2.wp.com/icons.iconarchive.com/icons/ph03nyx/super-mario/256/Retro-Block-Question-icon.png"} />
                 <Card.Title style={{textAlign:"center"}}>{val.type}</Card.Title>
                 <Card.Text>
                   {"Twilio ID: " + val.twilioId}
