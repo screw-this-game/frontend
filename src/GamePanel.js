@@ -7,10 +7,11 @@ class GamePanel extends React.Component {
   GamePanel() {
     this.state = { }
     setTimeout(() => {
+      console.log("Timeout!");
       axios.get("https://stg-api.monotron.me/frontend/clients").then(resp => {
         this.setState({data: resp});
       })
-    }, 100);
+    }, 1000);
   }
 
 
