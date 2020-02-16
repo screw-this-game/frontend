@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Sessions from './Sessions';
+import GamePanel from './GamePanel';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 
 const routing = (
