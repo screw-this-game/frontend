@@ -2,7 +2,13 @@ import React from 'react';
 import './App.css';
 import { Container } from 'react-bootstrap';
 
-class App extends React.Component {
+class Sessions extends React.Component {
+
+  Sessions() {
+
+  }
+
+
   render() {
     return (
       <Container>
